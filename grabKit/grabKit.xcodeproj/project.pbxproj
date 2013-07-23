@@ -418,6 +418,23 @@
 		5FF1FF3715BF21FF00EF2CE4 /* GRKServiceQueryProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F3C2D0915B9F945008D894A /* GRKServiceQueryProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FF1FF3815BF21FF00EF2CE4 /* GRKTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F3C2D0B15B9F945008D894A /* GRKTokenStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FF1FF3915BF21FF00EF2CE4 /* GRKTokenStoreUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F3C2D0D15B9F945008D894A /* GRKTokenStoreUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C16C3E36179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.h in Headers */ = {isa = PBXBuildFile; fileRef = C16C3E34179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.h */; };
+		C16C3E37179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = C16C3E35179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.m */; };
+		C1CEE3DF179D00E400345857 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CEE3DE179D00E400345857 /* FacebookSDK.framework */; };
+		C1CEE3E0179D00E400345857 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CEE3DE179D00E400345857 /* FacebookSDK.framework */; };
+		C1CEE512179D284100345857 /* GRKRenrenQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CEE510179D284100345857 /* GRKRenrenQuery.h */; };
+		C1CEE513179D284100345857 /* GRKRenrenQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CEE511179D284100345857 /* GRKRenrenQuery.m */; };
+		C1CEE516179D28BA00345857 /* GRKRenrenConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CEE514179D28BA00345857 /* GRKRenrenConnector.h */; };
+		C1CEE517179D28BA00345857 /* GRKRenrenConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CEE515179D28BA00345857 /* GRKRenrenConnector.m */; };
+		C1CEE51A179D28CD00345857 /* GRKRenrenGrabber.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CEE518179D28CC00345857 /* GRKRenrenGrabber.h */; };
+		C1CEE51B179D28CD00345857 /* GRKRenrenGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CEE519179D28CD00345857 /* GRKRenrenGrabber.m */; };
+		C1CEE51E179D34AA00345857 /* GRKRenrenSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CEE51C179D34A800345857 /* GRKRenrenSingleton.h */; };
+		C1CEE51F179D34AA00345857 /* GRKRenrenSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CEE51D179D34A900345857 /* GRKRenrenSingleton.m */; };
+		C1CEE522179D356300345857 /* GRKRenrenQueriesQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CEE520179D355E00345857 /* GRKRenrenQueriesQueue.h */; };
+		C1CEE523179D356300345857 /* GRKRenrenQueriesQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CEE521179D356100345857 /* GRKRenrenQueriesQueue.m */; };
+		C1CEE527179D3B6E00345857 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C1CEE525179D3B6E00345857 /* RennSDK.bundle */; };
+		C1CEE528179D3B6E00345857 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CEE526179D3B6E00345857 /* RennSDK.framework */; };
+		C1CEE529179D3B6E00345857 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CEE526179D3B6E00345857 /* RennSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -851,6 +868,21 @@
 		5FEE8C1816FC3C55002C995B /* GRKFlickrSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKFlickrSingleton.m; sourceTree = "<group>"; };
 		5FEE9DEB15DF6CC900C44501 /* GRKPicasaQueriesQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKPicasaQueriesQueue.h; sourceTree = "<group>"; };
 		5FEE9DEC15DF6CC900C44501 /* GRKPicasaQueriesQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKPicasaQueriesQueue.m; sourceTree = "<group>"; };
+		C16C3E34179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GRKRenrenGrabber+usernameAndProfilePicture.h"; sourceTree = "<group>"; };
+		C16C3E35179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GRKRenrenGrabber+usernameAndProfilePicture.m"; sourceTree = "<group>"; };
+		C1CEE3DE179D00E400345857 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		C1CEE510179D284100345857 /* GRKRenrenQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKRenrenQuery.h; sourceTree = "<group>"; };
+		C1CEE511179D284100345857 /* GRKRenrenQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKRenrenQuery.m; sourceTree = "<group>"; };
+		C1CEE514179D28BA00345857 /* GRKRenrenConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKRenrenConnector.h; sourceTree = "<group>"; };
+		C1CEE515179D28BA00345857 /* GRKRenrenConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKRenrenConnector.m; sourceTree = "<group>"; };
+		C1CEE518179D28CC00345857 /* GRKRenrenGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKRenrenGrabber.h; sourceTree = "<group>"; };
+		C1CEE519179D28CD00345857 /* GRKRenrenGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKRenrenGrabber.m; sourceTree = "<group>"; };
+		C1CEE51C179D34A800345857 /* GRKRenrenSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKRenrenSingleton.h; sourceTree = "<group>"; };
+		C1CEE51D179D34A900345857 /* GRKRenrenSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKRenrenSingleton.m; sourceTree = "<group>"; };
+		C1CEE520179D355E00345857 /* GRKRenrenQueriesQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKRenrenQueriesQueue.h; sourceTree = "<group>"; };
+		C1CEE521179D356100345857 /* GRKRenrenQueriesQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKRenrenQueriesQueue.m; sourceTree = "<group>"; };
+		C1CEE525179D3B6E00345857 /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
+		C1CEE526179D3B6E00345857 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -870,6 +902,8 @@
 				5F3C2B4F15B9F7FC008D894A /* UIKit.framework in Frameworks */,
 				5F3C2B5115B9F7FC008D894A /* Foundation.framework in Frameworks */,
 				5F3C2B5315B9F7FC008D894A /* CoreGraphics.framework in Frameworks */,
+				C1CEE3DF179D00E400345857 /* FacebookSDK.framework in Frameworks */,
+				C1CEE528179D3B6E00345857 /* RennSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,6 +929,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FD3999815BF1E2B0063542C /* Foundation.framework in Frameworks */,
+				C1CEE3E0179D00E400345857 /* FacebookSDK.framework in Frameworks */,
+				C1CEE529179D3B6E00345857 /* RennSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -925,6 +961,7 @@
 		5F3C2B4D15B9F7FC008D894A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1CEE3DE179D00E400345857 /* FacebookSDK.framework */,
 				5F990C471702F42200B89A7B /* Social.framework */,
 				5FD46C9316B9122800EE496F /* QuartzCore.framework */,
 				5F8E24A816A7F8660090F93B /* Accounts.framework */,
@@ -1045,6 +1082,7 @@
 				5F3C2CEC15B9F945008D894A /* GRKServiceConnector.m */,
 				5F3C2CED15B9F945008D894A /* GRKServiceGrabber.h */,
 				5F3C2CEE15B9F945008D894A /* GRKServiceGrabber.m */,
+				C1CEE50F179D280400345857 /* renrenGraber */,
 				5F3C2CCE15B9F945008D894A /* deviceGrabber */,
 				5F3C2CD115B9F945008D894A /* facebookGrabber */,
 				5FEE8C0E16FC3C55002C995B /* flickrGrabber */,
@@ -1239,6 +1277,8 @@
 				5F654F8F16CA14D300991DE6 /* GRKInstagramGrabber+usernameAndProfilePicture.m */,
 				5F654F9016CA14D300991DE6 /* GRKPicasaGrabber+usernameAndProfilePicture.h */,
 				5F654F9116CA14D300991DE6 /* GRKPicasaGrabber+usernameAndProfilePicture.m */,
+				C16C3E34179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.h */,
+				C16C3E35179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.m */,
 			);
 			path = "GRKServiceGrabber+usernameAndProfilePicture";
 			sourceTree = "<group>";
@@ -1280,6 +1320,7 @@
 		5FB1341516AAA3C900BE500B /* submodules */ = {
 			isa = PBXGroup;
 			children = (
+				C1CEE524179D3B6E00345857 /* Renren */,
 				5F8CC03716DD1D2C00307678 /* PSTCollectionView */,
 				5FD46C7F16B9001100EE496F /* MBProgressHUD */,
 				5F654F4016C3A1F600991DE6 /* NVUIGradientButton */,
@@ -1714,6 +1755,34 @@
 			path = flickrGrabber;
 			sourceTree = "<group>";
 		};
+		C1CEE50F179D280400345857 /* renrenGraber */ = {
+			isa = PBXGroup;
+			children = (
+				C1CEE510179D284100345857 /* GRKRenrenQuery.h */,
+				C1CEE511179D284100345857 /* GRKRenrenQuery.m */,
+				C1CEE520179D355E00345857 /* GRKRenrenQueriesQueue.h */,
+				C1CEE521179D356100345857 /* GRKRenrenQueriesQueue.m */,
+				C1CEE514179D28BA00345857 /* GRKRenrenConnector.h */,
+				C1CEE515179D28BA00345857 /* GRKRenrenConnector.m */,
+				C1CEE518179D28CC00345857 /* GRKRenrenGrabber.h */,
+				C1CEE519179D28CD00345857 /* GRKRenrenGrabber.m */,
+				C1CEE51C179D34A800345857 /* GRKRenrenSingleton.h */,
+				C1CEE51D179D34A900345857 /* GRKRenrenSingleton.m */,
+			);
+			name = renrenGraber;
+			path = grabKit/GrabKitLib/serviceGrabbers/renrenGraber;
+			sourceTree = SOURCE_ROOT;
+		};
+		C1CEE524179D3B6E00345857 /* Renren */ = {
+			isa = PBXGroup;
+			children = (
+				C1CEE525179D3B6E00345857 /* RennSDK.bundle */,
+				C1CEE526179D3B6E00345857 /* RennSDK.framework */,
+			);
+			name = Renren;
+			path = grabKit/submodules/Renren;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1907,6 +1976,12 @@
 				5FEE8C2516FC3C55002C995B /* GRKFlickrSingleton.h in Headers */,
 				5F32E90A16FD8A7D006340B7 /* GRKPickerViewController+privateMethods.h in Headers */,
 				5F990C331702D73A00B89A7B /* GRKPickerViewController.h in Headers */,
+				C1CEE512179D284100345857 /* GRKRenrenQuery.h in Headers */,
+				C1CEE516179D28BA00345857 /* GRKRenrenConnector.h in Headers */,
+				C1CEE51A179D28CD00345857 /* GRKRenrenGrabber.h in Headers */,
+				C1CEE51E179D34AA00345857 /* GRKRenrenSingleton.h in Headers */,
+				C1CEE522179D356300345857 /* GRKRenrenQueriesQueue.h in Headers */,
+				C16C3E36179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1993,7 +2068,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 5F3C2B4415B9F7FC008D894A /* Build configuration list for PBXProject "GrabKit" */;
+			buildConfigurationList = 5F3C2B4415B9F7FC008D894A /* Build configuration list for PBXProject "grabKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2023,6 +2098,7 @@
 				5F990C431702EF6800B89A7B /* GrabKitDemoHomeViewController.xib in Resources */,
 				5F990C441702EF6C00B89A7B /* GrabKitDemoHomeViewController-ipad.xib in Resources */,
 				5F990C451702F0D000B89A7B /* GrabKitBundle.bundle in Resources */,
+				C1CEE527179D3B6E00345857 /* RennSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2303,6 +2379,12 @@
 				5FEE8C2716FC3C55002C995B /* GRKFlickrSingleton.m in Sources */,
 				5F32E90C16FD8A7D006340B7 /* GRKPickerViewController+privateMethods.m in Sources */,
 				5F990C2D1702D2A500B89A7B /* GRKPickerViewController.m in Sources */,
+				C1CEE513179D284100345857 /* GRKRenrenQuery.m in Sources */,
+				C1CEE517179D28BA00345857 /* GRKRenrenConnector.m in Sources */,
+				C1CEE51B179D28CD00345857 /* GRKRenrenGrabber.m in Sources */,
+				C1CEE51F179D34AA00345857 /* GRKRenrenSingleton.m in Sources */,
+				C1CEE523179D356300345857 /* GRKRenrenQueriesQueue.m in Sources */,
+				C16C3E37179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2402,7 +2484,11 @@
 		5F3C2B7815B9F7FC008D894A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/grabKit/submodules/Renren\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrabKit/GrabKitDemo/grabKitDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2426,7 +2512,11 @@
 		5F3C2B7915B9F7FC008D894A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/grabKit/submodules/Renren\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrabKit/GrabKitDemo/grabKitDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2533,7 +2623,11 @@
 			buildSettings = {
 				DSTROOT = /tmp/GrabKitLib.dst;
 				EXECUTABLE_PREFIX = "";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/grabKit/submodules/Renren\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrabKitLib/GrabKitLib-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -2549,7 +2643,11 @@
 			buildSettings = {
 				DSTROOT = /tmp/GrabKitLib.dst;
 				EXECUTABLE_PREFIX = "";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/grabKit/submodules/Renren\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrabKitLib/GrabKitLib-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -2563,7 +2661,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F3C2B4415B9F7FC008D894A /* Build configuration list for PBXProject "GrabKit" */ = {
+		5F3C2B4415B9F7FC008D894A /* Build configuration list for PBXProject "grabKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F3C2B7515B9F7FC008D894A /* Debug */,

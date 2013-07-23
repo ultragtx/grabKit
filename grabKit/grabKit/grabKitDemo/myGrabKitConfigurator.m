@@ -138,6 +138,19 @@
 
 }
 
+// Renren - http://dev.renren.com
+
+- (NSString *)renrenAppId {
+    return @"212544";
+}
+
+- (NSString *)renrenApiKey {
+    return @"e59a0975b3af418bb3d49952ed7cdbc4";
+}
+
+- (NSString *)renrenApiSecret {
+    return @"4cd54416c6124aaeb202cae22b457127";
+}
 
 
 // Others

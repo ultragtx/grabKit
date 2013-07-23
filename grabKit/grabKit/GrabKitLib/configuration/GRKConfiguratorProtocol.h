@@ -51,6 +51,12 @@
 - (NSString*)picasaClientId;
 - (NSString*)picasaClientSecret;
 
+// Renren
+
+- (NSString *)renrenAppId;
+- (NSString *)renrenApiKey;
+- (NSString *)renrenApiSecret;
+
 
 // Others
 

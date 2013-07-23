@@ -85,6 +85,11 @@
         [services addObject:device];
         #endif
         
+        NSDictionary * renren = [NSDictionary dictionaryWithObjectsAndKeys:@"GRKRenrenGrabber", @"class",
+                                 @"Renren", @"title",
+                                 nil];
+        [services addObject:renren];
+        
 
         //services = [[NSArray alloc] initWithObjects:facebook, flickr, instagram, picasa, device, nil];
         
