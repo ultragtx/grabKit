@@ -34,19 +34,79 @@ static NSString * const kRequestTime = @"RequestTime";
     return self;
 }
 
-- (void)saveAccessToken {
-    RennAccessToken *accessToken = [RennClient accessToken];
-    [GRKTokenStore storeToken:accessToken.accessToken withName:kTokenType forGrabberType:grabberType];
+#pragma mark - Token storage
+
+- (void)storeAccessToken:(RennAccessToken *)accessToken {
+    if (accessToken.tokenType) [GRKTokenStore storeToken:accessToken.tokenType withName:kTokenType forGrabberType:grabberType];
+    if (accessToken.accessToken) [GRKTokenStore storeToken:accessToken.accessToken withName:kAccessToken forGrabberType:grabberType];
+    if (accessToken.refreshToken) [GRKTokenStore storeToken:accessToken.refreshToken withName:kRefreshToken forGrabberType:grabberType];
+    if (accessToken.accessScope) [GRKTokenStore storeToken:accessToken.accessScope withName:kAccessScope forGrabberType:grabberType];
+    if (accessToken.macKey) [GRKTokenStore storeToken:accessToken.macKey withName:kMacKey forGrabberType:grabberType];
+    if (accessToken.macAlgorithm) [GRKTokenStore storeToken:accessToken.macAlgorithm withName:kMacAlgorithm forGrabberType:grabberType];
+    
+    NSString *strExpiresInt = [NSString stringWithFormat:@"%d", accessToken.expiresIn];
+    [GRKTokenStore storeToken:strExpiresInt withName:kExpiresIn forGrabberType:grabberType];
+    
+    NSString *strRequestTime = [NSString stringWithFormat:@"%lf", accessToken.requestTime];
+    [GRKTokenStore storeToken:strRequestTime withName:kRequestTime forGrabberType:grabberType];
+    
+//    [self removeUserDefaultsAccessToken];
 }
 
-- (void)loadAccessToken {
+- (RennAccessToken *)loadAccessToken {
+    RennAccessToken *accessToken = [[RennAccessToken alloc] init];
     
+    NSString * tokenType = [GRKTokenStore tokenWithName:kTokenType forGrabberType:grabberType];
+    NSString * token = [GRKTokenStore tokenWithName:kAccessToken forGrabberType:grabberType];
+    NSString * refreshToken = [GRKTokenStore tokenWithName:kRefreshToken forGrabberType:grabberType];
+    NSString * accessScope = [GRKTokenStore tokenWithName:kAccessScope forGrabberType:grabberType];
+    NSString * macKey = [GRKTokenStore tokenWithName:kMacKey forGrabberType:grabberType];
+    NSString * macAlgorithm = [GRKTokenStore tokenWithName:kMacAlgorithm forGrabberType:grabberType];
+    NSString * strExpiresIn = [GRKTokenStore tokenWithName:kExpiresIn forGrabberType:grabberType];
+    NSString * strRequestTime = [GRKTokenStore tokenWithName:kRequestTime forGrabberType:grabberType];
+    
+    NSInteger expiresIn;
+    if (strExpiresIn) expiresIn = [strExpiresIn integerValue];
+    
+    NSTimeInterval requestTime;
+    if (strRequestTime) requestTime = [strRequestTime doubleValue];
+    
+    accessToken.tokenType = tokenType;
+    accessToken.accessToken = token;
+    accessToken.refreshToken = refreshToken;
+    accessToken.accessScope = accessScope;
+    accessToken.macKey = macKey;
+    accessToken.macAlgorithm = macAlgorithm;
+    accessToken.expiresIn = expiresIn;
+    accessToken.requestTime = requestTime;
+    
+    return accessToken;
+}
+
+- (void)removeAccessToken {
+    [GRKTokenStore removeTokenWithName:kTokenType forGrabberType:grabberType];
+    [GRKTokenStore removeTokenWithName:kAccessToken forGrabberType:grabberType];
+    [GRKTokenStore removeTokenWithName:kRefreshToken forGrabberType:grabberType];
+    [GRKTokenStore removeTokenWithName:kAccessScope forGrabberType:grabberType];
+    [GRKTokenStore removeTokenWithName:kMacKey forGrabberType:grabberType];
+    [GRKTokenStore removeTokenWithName:kMacAlgorithm forGrabberType:grabberType];
+    [GRKTokenStore removeTokenWithName:kExpiresIn forGrabberType:grabberType];
+    [GRKTokenStore removeTokenWithName:kRequestTime forGrabberType:grabberType];
+    
+    [self removeUserDefaultsAccessToken];
+}
+
+- (void)removeUserDefaultsAccessToken {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults removeObjectForKey:@"rr_renn_access_token"];
+    [userDefaults removeObjectForKey:@"rr_renn_uid"];
+    [userDefaults synchronize];
 }
 
 - (void)connectWithConnectionIsCompleteBlock:(GRKGrabberConnectionIsCompleteBlock)completeBlock andErrorBlock:(GRKErrorBlock)errorBlock {
     if ( completeBlock == nil ) @throw NSInvalidArgumentException;
-    // TODO: Load and set Token
     [GRKRenrenSingleton sharedInstance]; // Set apikey secret etc. to RennClient
+    [RennClient setAccessToken:[self loadAccessToken]];
     
     if ([RennClient isAuthorizeValid]) {
         // Session is supposed to be valid, test to make sure it's valid
@@ -59,12 +119,12 @@ static NSString * const kRequestTime = @"RequestTime";
                 completeBlock(YES);
             }
             else {
-                // TODO: Remove stored token
+                [self removeAccessToken];
                 [self connectWithConnectionIsCompleteBlock:completeBlock andErrorBlock:errorBlock];
             }
             [_queries removeObject:query];
         } andErrorBlock:^(NSError *error) {
-            // TODO: Remove stored token
+            [self removeUserDefaultsAccessToken];
             [self connectWithConnectionIsCompleteBlock:completeBlock andErrorBlock:errorBlock];
             
             [_queries removeObject:query];
@@ -95,7 +155,7 @@ static NSString * const kRequestTime = @"RequestTime";
     if ( connectedBlock == nil ) @throw NSInvalidArgumentException;
     
     [GRKRenrenSingleton sharedInstance];
-    // TODO: Load token
+    [RennClient setAccessToken:[self loadAccessToken]];
     
     BOOL connected = [RennClient isAuthorizeValid];
     if (!connected) {
@@ -117,7 +177,7 @@ static NSString * const kRequestTime = @"RequestTime";
         
         [_queries removeObject:query];
     } andErrorBlock:^(NSError *error) {
-        // TODO: Remove stored token
+        [self removeAccessToken];
         if (errorBlock) {
             errorBlock(error);
         }
@@ -155,26 +215,26 @@ static NSString * const kRequestTime = @"RequestTime";
              (
               [userId isKindOfClass:[NSNumber class]] &&
               [(NSNumber *)userId compare:[NSNumber numberWithInt:0]] > 0
-             )
+              )
              ||
              (
               [userId isKindOfClass:[NSString class]] &&
               [userId length] > 0 &&
               ![userId isEqualToString:@"<null>"]
-             )
-            )) {
-            return YES;
-        }
+              )
+             )) {
+                return YES;
+            }
     }
     return NO;
 }
 
-#pragma mark - 
+#pragma mark -
 
 #pragma mark - RennLoginDelegate
 
 - (void)rennLoginSuccess {
-    // TODO: Store token
+    [self storeAccessToken:[RennClient accessToken]];
     if (connectionIsCompleteBlock != nil) {
         connectionIsCompleteBlock(YES);
         connectionIsCompleteBlock = nil;
@@ -183,7 +243,7 @@ static NSString * const kRequestTime = @"RequestTime";
 }
 
 - (void)rennLogoutSuccess {
-    // TODO: Remove toen
+    [self removeAccessToken];
     if (connectionIsCompleteBlock != nil) {
         connectionIsCompleteBlock(YES);
         connectionIsCompleteBlock = nil;
@@ -192,7 +252,11 @@ static NSString * const kRequestTime = @"RequestTime";
 }
 
 - (void)rennLoginCancelded {
-    ;
+    if (connectionIsCompleteBlock != nil) {
+        connectionIsCompleteBlock(NO);
+        connectionIsCompleteBlock = nil;
+        connectionDidFailBlock = nil;
+    }
 }
 
 - (void)rennLoginDidFailWithError:(NSError *)error {
