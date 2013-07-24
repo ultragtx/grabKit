@@ -265,6 +265,8 @@ withNumberOfPhotosPerPage:(NSUInteger)numberOfPhotosPerPage
     GRKAlbum * album = [GRKAlbum albumWithId:albumId andName:name andCount:count andDates:dates];
     
     // TODO: Fill cover here ?
+    GRKPhoto *coverPhoto = [self coverPhotoWithRawAlbum:rawAlbum];
+    album.coverPhoto = coverPhoto;
     
     return album;
 }
