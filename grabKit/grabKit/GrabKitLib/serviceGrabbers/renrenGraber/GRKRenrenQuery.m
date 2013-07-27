@@ -21,8 +21,8 @@
     self = [super init];
     if (self) {
         param = _param;
-        handlingBlock = [_handlingBlock copy];
-        errorBlock = [_errorBlock copy];
+        handlingBlock = _handlingBlock;
+        errorBlock = _errorBlock;
     }
     return self;
 }

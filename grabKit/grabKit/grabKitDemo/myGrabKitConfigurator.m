@@ -40,7 +40,7 @@
 	return @"350975928312519";
 #else
     #warning Facebook AppId should be set
-    return @"";
+    return @"350975928312519";
 #endif
 
 }
@@ -55,7 +55,7 @@
     return @"482aefe9c03f2b3a0f8e105f2235e0b7";
 #else
     #warning FlickR Api Key should be set
-    return @"";
+    return @"482aefe9c03f2b3a0f8e105f2235e0b7";
 #endif
     
 }
@@ -66,7 +66,7 @@
     return @"3201234b3967e37d";
 #else
     #warning FlickR API Secret should be set
-    return @"";
+    return @"3201234b3967e37d";
 #endif
 
     
@@ -78,7 +78,7 @@
     return @"grabkitdemoappflickr://";
 #else
     #warning FlickR Redirect Uri should be set
-    return @"";
+    return @"grabkitdemoappflickr://";
 #endif
 
     
@@ -95,7 +95,7 @@
     return @"936b4b30e58041b1b86541f1586109d8";
 #else
     #warning Instagram AppId should be set
-    return @"";
+    return @"936b4b30e58041b1b86541f1586109d8";
 #endif
 
 }
@@ -106,7 +106,7 @@
     return @"grabkitdemoappinstagram://";
 #else
     #warning Instagram Redirect Uri  should be set
-    return @"";
+    return @"grabkitdemoappinstagram://";
 #endif
 
 }
@@ -121,7 +121,7 @@
     return @"301419300289.apps.googleusercontent.com";
 #else
     #warning Picasa Client Id should be set
-    return @"";
+    return @"301419300289.apps.googleusercontent.com";
 #endif
 
     
@@ -133,7 +133,7 @@
     return  @"mChy4Y2YJ1j8El1J96taVPMO";
 #else
     #warning Picasa Client Secret  should be set
-    return @"";
+    return  @"mChy4Y2YJ1j8El1J96taVPMO";
 #endif
 
 }

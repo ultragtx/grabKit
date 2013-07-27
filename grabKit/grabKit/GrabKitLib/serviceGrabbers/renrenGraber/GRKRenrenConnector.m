@@ -65,10 +65,10 @@ static NSString * const kRequestTime = @"RequestTime";
     NSString * strExpiresIn = [GRKTokenStore tokenWithName:kExpiresIn forGrabberType:grabberType];
     NSString * strRequestTime = [GRKTokenStore tokenWithName:kRequestTime forGrabberType:grabberType];
     
-    NSInteger expiresIn;
+    NSInteger expiresIn = 0;
     if (strExpiresIn) expiresIn = [strExpiresIn integerValue];
     
-    NSTimeInterval requestTime;
+    NSTimeInterval requestTime = 0;
     if (strRequestTime) requestTime = [strRequestTime doubleValue];
     
     accessToken.tokenType = tokenType;
