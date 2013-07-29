@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *accessToken;
 @property (strong, nonatomic) NSString *openId;
 @property (strong, nonatomic) NSDate *expirationDate;
+@property (strong, nonatomic) TencentOAuth *lastStoredTencentOAuth; // This is used to fix EXC_BAD_ACCESS
 
 + (GRKQQConnectSingleton *)sharedInstance;
 

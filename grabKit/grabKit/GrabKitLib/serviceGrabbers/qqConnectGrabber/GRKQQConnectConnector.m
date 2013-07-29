@@ -70,6 +70,7 @@ static NSString * kGRKQQConnectError = @"com.grabkit.qqconnect.GRKQQConnectConne
     [GRKQQConnectSingleton sharedInstance].accessToken =  accessToken;
     [GRKQQConnectSingleton sharedInstance].openId =  openId;
     [GRKQQConnectSingleton sharedInstance].expirationDate =  expirationDate;
+    [GRKQQConnectSingleton sharedInstance].lastStoredTencentOAuth = tencentOAuth;
 }
 
 - (void)removeAccessToken {
@@ -130,7 +131,7 @@ static NSString * kGRKQQConnectError = @"com.grabkit.qqconnect.GRKQQConnectConne
         
         [[GRKConnectorsDispatcher sharedInstance] registerServiceConnectorAsConnecting:self];
         // TODO: make this async ?
-        [_tencentOAuth authorize:[GRKQQConnectSingleton permissions] inSafari:NO];
+        [_tencentOAuth authorize:[GRKQQConnectSingleton permissions] inSafari:YES];
     }
 }
 
@@ -162,7 +163,7 @@ static NSString * kGRKQQConnectError = @"com.grabkit.qqconnect.GRKQQConnectConne
     _tencentOAuth = [[GRKQQConnectSingleton sharedInstance] newTencentOAuthWithDelegate:self];
     
     [self loadStoredTokenForTencentOAuth:_tencentOAuth];
-
+    
     BOOL connected = [_tencentOAuth isSessionValid];
     if (!connected) {
         dispatch_async_on_main_queue(connectedBlock, connected);
@@ -261,7 +262,5 @@ static NSString * kGRKQQConnectError = @"com.grabkit.qqconnect.GRKQQConnectConne
         _connectionDidFailBlock = nil;
     }
 }
-
-#pragma mark -
 
 @end
