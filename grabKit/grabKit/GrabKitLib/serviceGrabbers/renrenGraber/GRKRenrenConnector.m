@@ -111,10 +111,10 @@ static NSString * const kRequestTime = @"RequestTime";
     if ([RennClient isAuthorizeValid]) {
         // Session is supposed to be valid, test to make sure it's valid
         
-        GRKRenrenQuery *query = nil;
+        __block GRKRenrenQuery *testLoginQuery = nil;
         GetUserLoginParam *param = [[GetUserLoginParam alloc] init];
         
-        query = [GRKRenrenQuery queryWithParam:param withHandlingBlock:^(id query, id result) {
+        testLoginQuery = [GRKRenrenQuery queryWithParam:param withHandlingBlock:^(id query, id result) {
             if ([self isValidUserInfo:result]) {
                 completeBlock(YES);
             }
@@ -122,16 +122,18 @@ static NSString * const kRequestTime = @"RequestTime";
                 [self removeAccessToken];
                 [self connectWithConnectionIsCompleteBlock:completeBlock andErrorBlock:errorBlock];
             }
-            [_queries removeObject:query];
+            [_queries removeObject:testLoginQuery];
+            testLoginQuery = nil;
         } andErrorBlock:^(NSError *error) {
             [self removeUserDefaultsAccessToken];
             [self connectWithConnectionIsCompleteBlock:completeBlock andErrorBlock:errorBlock];
             
-            [_queries removeObject:query];
+            [_queries removeObject:testLoginQuery];
+            testLoginQuery = nil;
         }];
         
-        [_queries addObject:query];
-        [query perform];
+        [_queries addObject:testLoginQuery];
+        [testLoginQuery perform];
     }
     else {
         connectionIsCompleteBlock = [completeBlock copy];
@@ -145,7 +147,7 @@ static NSString * const kRequestTime = @"RequestTime";
 -(void)disconnectWithDisconnectionIsCompleteBlock:(GRKGrabberDisconnectionIsCompleteBlock)completeBlock andErrorBlock:(GRKErrorBlock)errorBlock {
     [GRKRenrenSingleton sharedInstance];
     
-    connectionIsCompleteBlock = [completeBlock copy];
+    disconnecctionIsCompleteBlock = [completeBlock copy];
     connectionDidFailBlock = [errorBlock copy];
     
     [RennClient logoutWithDelegate:self];
@@ -163,10 +165,10 @@ static NSString * const kRequestTime = @"RequestTime";
         return;
     }
     
-    GRKRenrenQuery *query = nil;
+    __block GRKRenrenQuery *testLoginQuery = nil;
     GetUserLoginParam *param = [[GetUserLoginParam alloc] init];
     
-    query = [GRKRenrenQuery queryWithParam:param withHandlingBlock:^(id query, id result) {
+    testLoginQuery = [GRKRenrenQuery queryWithParam:param withHandlingBlock:^(id query, id result) {
         if ([self isValidUserInfo:result]) {
             connectedBlock(YES);
         }
@@ -175,17 +177,19 @@ static NSString * const kRequestTime = @"RequestTime";
         }
         
         
-        [_queries removeObject:query];
+        [_queries removeObject:testLoginQuery];
+        testLoginQuery = nil;
     } andErrorBlock:^(NSError *error) {
         [self removeAccessToken];
         if (errorBlock) {
             errorBlock(error);
         }
-        [_queries removeObject:query];
+        [_queries removeObject:testLoginQuery];
+        testLoginQuery = nil;
     }];
     
-    [_queries addObject:query];
-    [query perform];
+    [_queries addObject:testLoginQuery];
+    [testLoginQuery perform];
 }
 
 -(void) cancelAll {
@@ -196,7 +200,13 @@ static NSString * const kRequestTime = @"RequestTime";
 }
 
 -(void) didNotCompleteConnection {
-    
+    if (connectionIsCompleteBlock != nil ){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            connectionIsCompleteBlock(NO);
+            connectionIsCompleteBlock = nil;
+            connectionDidFailBlock = nil;
+        });
+    }
 }
 
 -(BOOL) canHandleURL:(NSURL*)url {
@@ -244,9 +254,9 @@ static NSString * const kRequestTime = @"RequestTime";
 
 - (void)rennLogoutSuccess {
     [self removeAccessToken];
-    if (connectionIsCompleteBlock != nil) {
-        connectionIsCompleteBlock(YES);
-        connectionIsCompleteBlock = nil;
+    if (disconnecctionIsCompleteBlock != nil) {
+        disconnecctionIsCompleteBlock(YES);
+        disconnecctionIsCompleteBlock = nil;
         connectionDidFailBlock = nil;
     }
 }

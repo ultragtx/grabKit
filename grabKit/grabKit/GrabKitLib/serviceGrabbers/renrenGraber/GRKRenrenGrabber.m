@@ -96,9 +96,9 @@ static NSString *kGRKServiceNameRenren = @"Renren";
     param.pageNumber = pageIndex + 1; // the api start at 1, in grabkit we start at 0
     param.pageSize = numberOfAlbumsPerPage;
     
-    __block GRKRenrenQuery *query = nil;
+    __block GRKRenrenQuery *albumsQuery = nil;
     
-    query = [GRKRenrenQuery queryWithParam:param withHandlingBlock:^(id query, id result) {
+    albumsQuery = [GRKRenrenQuery queryWithParam:param withHandlingBlock:^(id query, id result) {
         if ([self isResultForAlbumsInTheExpectedFormat:result]) {
             NSMutableArray * albums = [NSMutableArray arrayWithCapacity:[(NSArray *)result count]];
             
@@ -113,16 +113,16 @@ static NSString *kGRKServiceNameRenren = @"Renren";
             dispatch_async_on_main_queue(errorBlock, [self errorForBadFormatResultForAlbumsOperation]);
         }
         
-        [self unregisterQueryAsLoading:query];
-        query = nil;
+        [self unregisterQueryAsLoading:albumsQuery];
+        albumsQuery = nil;
     } andErrorBlock:^(NSError *error) {
         dispatch_async_on_main_queue(errorBlock, [self errorForAlbumsOperationWithOriginalError:error]);
-        [self unregisterQueryAsLoading:query];
-        query = nil;
+        [self unregisterQueryAsLoading:albumsQuery];
+        albumsQuery = nil;
     }];
     
-    [self registerQueryAsLoading:query];
-    [query perform];
+    [self registerQueryAsLoading:albumsQuery];
+    [albumsQuery perform];
 }
 
 - (void)fillAlbum:(GRKAlbum *)album
@@ -146,9 +146,9 @@ withNumberOfPhotosPerPage:(NSUInteger)numberOfPhotosPerPage
     param.pageSize = numberOfPhotosPerPage;
     param.pageNumber = pageIndex + 1; // the api start at 1, in grabkit we start at 0
     
-    __block GRKRenrenQuery *query = nil;
+    __block GRKRenrenQuery *albumQuery = nil;
     
-    query = [GRKRenrenQuery queryWithParam:param withHandlingBlock:^(id query, id result) {
+    albumQuery = [GRKRenrenQuery queryWithParam:param withHandlingBlock:^(id query, id result) {
         if (result != nil && [result isKindOfClass:[NSArray class]]) {
             NSMutableArray *photos = [NSMutableArray array];
             
@@ -165,16 +165,16 @@ withNumberOfPhotosPerPage:(NSUInteger)numberOfPhotosPerPage
             dispatch_async_on_main_queue(errorBlock, [self errorForBadFormatResultForFillAlbumOperationWithOriginalAlbum:album]);
         }
         
-        [self unregisterQueryAsLoading:query];
-        query = nil;
+        [self unregisterQueryAsLoading:albumQuery];
+        albumQuery = nil;
     } andErrorBlock:^(NSError *error) {
         dispatch_async_on_main_queue(errorBlock, [self errorForAlbumsOperationWithOriginalError:error]);
-        [self unregisterQueryAsLoading:query];
-        query = nil;
+        [self unregisterQueryAsLoading:albumQuery];
+        albumQuery = nil;
     }];
     
-    [self registerQueryAsLoading:query];
-    [query perform];
+    [self registerQueryAsLoading:albumQuery];
+    [albumQuery perform];
 }
 
 - (void)fillCoverPhotoOfAlbums:(NSArray *)albums

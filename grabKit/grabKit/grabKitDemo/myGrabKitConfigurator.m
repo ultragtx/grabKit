@@ -152,6 +152,25 @@
     return @"4cd54416c6124aaeb202cae22b457127";
 }
 
+// QQ
+
+- (NSString *)qqConnectAppId {
+    return @"222222";
+}
+
+- (NSString *)qqConnectAppKey {
+    NSAssert(false, @"no key");
+    return nil;
+}
+
+- (NSString *)qqConnectAppSecret {
+    NSAssert(false, @"no secret");
+    return nil;
+}
+
+- (NSString *)qqConnectRedirectUri {
+    return @"tencent222222://";
+}
 
 // Others
 

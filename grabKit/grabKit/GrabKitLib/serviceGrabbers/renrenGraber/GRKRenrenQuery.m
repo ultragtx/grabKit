@@ -33,6 +33,8 @@
 }
 
 - (void)cancel {
+    handlingBlock = nil;
+    errorBlock = nil;
     [service clearDelegateAndCancel];
 }
 
@@ -48,12 +50,22 @@
 //    }
     // response is already a dictionary 
     
-    dispatch_async_on_main_queue(handlingBlock, self, response);
+//    dispatch_async_on_main_queue(handlingBlock, self, response);
+    if (handlingBlock != nil ){
+        @synchronized(self) {
+	        handlingBlock(self, response);
+        }
+    }
 }
 
 - (void)rennService:(RennService *)service requestFailWithError:(NSError*)error {
-    dispatch_async_on_main_queue(errorBlock, error);
-}
+//    dispatch_async_on_main_queue(errorBlock, error);
+    if ( errorBlock != nil ){
+        @synchronized(self) {
+	        errorBlock(error);
+        }
+    }
 
+}
 
 @end

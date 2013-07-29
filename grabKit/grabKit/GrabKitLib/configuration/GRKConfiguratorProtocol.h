@@ -57,6 +57,12 @@
 - (NSString *)renrenApiKey;
 - (NSString *)renrenApiSecret;
 
+// QQ
+
+- (NSString *)qqConnectAppId;
+- (NSString *)qqConnectAppKey;
+- (NSString *)qqConnectAppSecret;
+- (NSString *)qqConnectRedirectUri;
 
 // Others
 

@@ -435,6 +435,26 @@
 		C1CEE527179D3B6E00345857 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C1CEE525179D3B6E00345857 /* RennSDK.bundle */; };
 		C1CEE528179D3B6E00345857 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CEE526179D3B6E00345857 /* RennSDK.framework */; };
 		C1CEE529179D3B6E00345857 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CEE526179D3B6E00345857 /* RennSDK.framework */; };
+		C1F2717917A3A1AA00329D55 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F2717717A3A1AA00329D55 /* TencentOpenAPI.framework */; };
+		C1F2717A17A3A1AA00329D55 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F2717717A3A1AA00329D55 /* TencentOpenAPI.framework */; };
+		C1F2717B17A3A1AB00329D55 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C1F2717817A3A1AA00329D55 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		C1F2717C17A3CE6E00329D55 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3C2E3315BA06E3008D894A /* SystemConfiguration.framework */; };
+		C1F2717E17A3CF3100329D55 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F2717D17A3CF2D00329D55 /* CoreTelephony.framework */; };
+		C1F2718017A3CF7200329D55 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F2717F17A3CF6E00329D55 /* libz.1.1.3.dylib */; };
+		C1F2718217A3CF9900329D55 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F2718117A3CF9600329D55 /* MobileCoreServices.framework */; };
+		C1F2718417A3CFB800329D55 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F2718317A3CFB500329D55 /* libstdc++.dylib */; };
+		C1F2718817A3D0CD00329D55 /* GRKQQConnectQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F2718617A3D0CD00329D55 /* GRKQQConnectQuery.h */; };
+		C1F2718917A3D0CD00329D55 /* GRKQQConnectQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F2718717A3D0CD00329D55 /* GRKQQConnectQuery.m */; };
+		C1F2718C17A3D0EB00329D55 /* GRKQQConnectQueriesQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F2718A17A3D0EA00329D55 /* GRKQQConnectQueriesQueue.h */; };
+		C1F2718D17A3D0EB00329D55 /* GRKQQConnectQueriesQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F2718B17A3D0EA00329D55 /* GRKQQConnectQueriesQueue.m */; };
+		C1F2719017A3D10600329D55 /* GRKQQConnectConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F2718E17A3D10500329D55 /* GRKQQConnectConnector.h */; };
+		C1F2719117A3D10600329D55 /* GRKQQConnectConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F2718F17A3D10600329D55 /* GRKQQConnectConnector.m */; };
+		C1F2719417A3D12F00329D55 /* GRKQQConnectGrabber.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F2719217A3D12D00329D55 /* GRKQQConnectGrabber.h */; };
+		C1F2719517A3D12F00329D55 /* GRKQQConnectGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F2719317A3D12E00329D55 /* GRKQQConnectGrabber.m */; };
+		C1F2719817A3D14C00329D55 /* GRKQQConnectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F2719617A3D14900329D55 /* GRKQQConnectSingleton.h */; };
+		C1F2719917A3D14C00329D55 /* GRKQQConnectSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F2719717A3D14B00329D55 /* GRKQQConnectSingleton.m */; };
+		C1F2719C17A52FEF00329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F2719A17A52FE900329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.h */; };
+		C1F2719D17A52FEF00329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F2719B17A52FEC00329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -883,6 +903,24 @@
 		C1CEE521179D356100345857 /* GRKRenrenQueriesQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKRenrenQueriesQueue.m; sourceTree = "<group>"; };
 		C1CEE525179D3B6E00345857 /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
 		C1CEE526179D3B6E00345857 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
+		C1F2717717A3A1AA00329D55 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		C1F2717817A3A1AA00329D55 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		C1F2717D17A3CF2D00329D55 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C1F2717F17A3CF6E00329D55 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		C1F2718117A3CF9600329D55 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C1F2718317A3CFB500329D55 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		C1F2718617A3D0CD00329D55 /* GRKQQConnectQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKQQConnectQuery.h; sourceTree = "<group>"; };
+		C1F2718717A3D0CD00329D55 /* GRKQQConnectQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKQQConnectQuery.m; sourceTree = "<group>"; };
+		C1F2718A17A3D0EA00329D55 /* GRKQQConnectQueriesQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKQQConnectQueriesQueue.h; sourceTree = "<group>"; };
+		C1F2718B17A3D0EA00329D55 /* GRKQQConnectQueriesQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKQQConnectQueriesQueue.m; sourceTree = "<group>"; };
+		C1F2718E17A3D10500329D55 /* GRKQQConnectConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKQQConnectConnector.h; sourceTree = "<group>"; };
+		C1F2718F17A3D10600329D55 /* GRKQQConnectConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKQQConnectConnector.m; sourceTree = "<group>"; };
+		C1F2719217A3D12D00329D55 /* GRKQQConnectGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKQQConnectGrabber.h; sourceTree = "<group>"; };
+		C1F2719317A3D12E00329D55 /* GRKQQConnectGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKQQConnectGrabber.m; sourceTree = "<group>"; };
+		C1F2719617A3D14900329D55 /* GRKQQConnectSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRKQQConnectSingleton.h; sourceTree = "<group>"; };
+		C1F2719717A3D14B00329D55 /* GRKQQConnectSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRKQQConnectSingleton.m; sourceTree = "<group>"; };
+		C1F2719A17A52FE900329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GRKQQConnectGrabber+usernameAndProfilePicture.h"; sourceTree = "<group>"; };
+		C1F2719B17A52FEC00329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GRKQQConnectGrabber+usernameAndProfilePicture.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -890,12 +928,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F2718417A3CFB800329D55 /* libstdc++.dylib in Frameworks */,
+				C1F2718217A3CF9900329D55 /* MobileCoreServices.framework in Frameworks */,
+				C1F2718017A3CF7200329D55 /* libz.1.1.3.dylib in Frameworks */,
+				C1F2717E17A3CF3100329D55 /* CoreTelephony.framework in Frameworks */,
+				5FD46C9416B9122800EE496F /* QuartzCore.framework in Frameworks */,
 				5F990C461702F41000B89A7B /* GrabKitLib.a in Frameworks */,
 				5F8E24AA16A7F8660090F93B /* Accounts.framework in Frameworks */,
 				5F8E24AB16A7F8660090F93B /* AdSupport.framework in Frameworks */,
 				5F3C2E3415BA06E3008D894A /* AssetsLibrary.framework in Frameworks */,
 				5F3C2E3815BA06F6008D894A /* CFNetwork.framework in Frameworks */,
-				5FD46C9416B9122800EE496F /* QuartzCore.framework in Frameworks */,
 				5F3C2E3515BA06E3008D894A /* Security.framework in Frameworks */,
 				5F990C481702F42200B89A7B /* Social.framework in Frameworks */,
 				5F3C2E3615BA06E3008D894A /* SystemConfiguration.framework in Frameworks */,
@@ -904,6 +946,7 @@
 				5F3C2B5315B9F7FC008D894A /* CoreGraphics.framework in Frameworks */,
 				C1CEE3DF179D00E400345857 /* FacebookSDK.framework in Frameworks */,
 				C1CEE528179D3B6E00345857 /* RennSDK.framework in Frameworks */,
+				C1F2717917A3A1AA00329D55 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,9 +971,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F2717C17A3CE6E00329D55 /* SystemConfiguration.framework in Frameworks */,
 				5FD3999815BF1E2B0063542C /* Foundation.framework in Frameworks */,
 				C1CEE3E0179D00E400345857 /* FacebookSDK.framework in Frameworks */,
 				C1CEE529179D3B6E00345857 /* RennSDK.framework in Frameworks */,
+				C1F2717A17A3A1AA00329D55 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +985,10 @@
 		5F3C2B3F15B9F7FC008D894A = {
 			isa = PBXGroup;
 			children = (
+				C1F2718317A3CFB500329D55 /* libstdc++.dylib */,
+				C1F2718117A3CF9600329D55 /* MobileCoreServices.framework */,
+				C1F2717F17A3CF6E00329D55 /* libz.1.1.3.dylib */,
+				C1F2717D17A3CF2D00329D55 /* CoreTelephony.framework */,
 				5F3C2B5415B9F7FC008D894A /* GrabKit */,
 				5FC592FC16FCDAA500ABDF45 /* GrabKitTests */,
 				5F3C2B4D15B9F7FC008D894A /* Frameworks */,
@@ -1082,6 +1131,7 @@
 				5F3C2CEC15B9F945008D894A /* GRKServiceConnector.m */,
 				5F3C2CED15B9F945008D894A /* GRKServiceGrabber.h */,
 				5F3C2CEE15B9F945008D894A /* GRKServiceGrabber.m */,
+				C1F2718517A3D08C00329D55 /* qqConnectGrabber */,
 				C1CEE50F179D280400345857 /* renrenGraber */,
 				5F3C2CCE15B9F945008D894A /* deviceGrabber */,
 				5F3C2CD115B9F945008D894A /* facebookGrabber */,
@@ -1279,6 +1329,8 @@
 				5F654F9116CA14D300991DE6 /* GRKPicasaGrabber+usernameAndProfilePicture.m */,
 				C16C3E34179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.h */,
 				C16C3E35179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.m */,
+				C1F2719A17A52FE900329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.h */,
+				C1F2719B17A52FEC00329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.m */,
 			);
 			path = "GRKServiceGrabber+usernameAndProfilePicture";
 			sourceTree = "<group>";
@@ -1320,6 +1372,7 @@
 		5FB1341516AAA3C900BE500B /* submodules */ = {
 			isa = PBXGroup;
 			children = (
+				C1F2717617A3A1AA00329D55 /* QQConnect */,
 				C1CEE524179D3B6E00345857 /* Renren */,
 				5F8CC03716DD1D2C00307678 /* PSTCollectionView */,
 				5FD46C7F16B9001100EE496F /* MBProgressHUD */,
@@ -1783,6 +1836,34 @@
 			path = grabKit/submodules/Renren;
 			sourceTree = SOURCE_ROOT;
 		};
+		C1F2717617A3A1AA00329D55 /* QQConnect */ = {
+			isa = PBXGroup;
+			children = (
+				C1F2717717A3A1AA00329D55 /* TencentOpenAPI.framework */,
+				C1F2717817A3A1AA00329D55 /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			name = QQConnect;
+			path = grabKit/submodules/QQConnect;
+			sourceTree = SOURCE_ROOT;
+		};
+		C1F2718517A3D08C00329D55 /* qqConnectGrabber */ = {
+			isa = PBXGroup;
+			children = (
+				C1F2718617A3D0CD00329D55 /* GRKQQConnectQuery.h */,
+				C1F2718717A3D0CD00329D55 /* GRKQQConnectQuery.m */,
+				C1F2718A17A3D0EA00329D55 /* GRKQQConnectQueriesQueue.h */,
+				C1F2718B17A3D0EA00329D55 /* GRKQQConnectQueriesQueue.m */,
+				C1F2718E17A3D10500329D55 /* GRKQQConnectConnector.h */,
+				C1F2718F17A3D10600329D55 /* GRKQQConnectConnector.m */,
+				C1F2719217A3D12D00329D55 /* GRKQQConnectGrabber.h */,
+				C1F2719317A3D12E00329D55 /* GRKQQConnectGrabber.m */,
+				C1F2719617A3D14900329D55 /* GRKQQConnectSingleton.h */,
+				C1F2719717A3D14B00329D55 /* GRKQQConnectSingleton.m */,
+			);
+			name = qqConnectGrabber;
+			path = grabKit/GrabKitLib/serviceGrabbers/qqConnectGrabber;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1982,6 +2063,12 @@
 				C1CEE51E179D34AA00345857 /* GRKRenrenSingleton.h in Headers */,
 				C1CEE522179D356300345857 /* GRKRenrenQueriesQueue.h in Headers */,
 				C16C3E36179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.h in Headers */,
+				C1F2718817A3D0CD00329D55 /* GRKQQConnectQuery.h in Headers */,
+				C1F2718C17A3D0EB00329D55 /* GRKQQConnectQueriesQueue.h in Headers */,
+				C1F2719017A3D10600329D55 /* GRKQQConnectConnector.h in Headers */,
+				C1F2719417A3D12F00329D55 /* GRKQQConnectGrabber.h in Headers */,
+				C1F2719817A3D14C00329D55 /* GRKQQConnectSingleton.h in Headers */,
+				C1F2719C17A52FEF00329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2099,6 +2186,7 @@
 				5F990C441702EF6C00B89A7B /* GrabKitDemoHomeViewController-ipad.xib in Resources */,
 				5F990C451702F0D000B89A7B /* GrabKitBundle.bundle in Resources */,
 				C1CEE527179D3B6E00345857 /* RennSDK.bundle in Resources */,
+				C1F2717B17A3A1AB00329D55 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2385,6 +2473,12 @@
 				C1CEE51F179D34AA00345857 /* GRKRenrenSingleton.m in Sources */,
 				C1CEE523179D356300345857 /* GRKRenrenQueriesQueue.m in Sources */,
 				C16C3E37179E56A5003CD01E /* GRKRenrenGrabber+usernameAndProfilePicture.m in Sources */,
+				C1F2718917A3D0CD00329D55 /* GRKQQConnectQuery.m in Sources */,
+				C1F2718D17A3D0EB00329D55 /* GRKQQConnectQueriesQueue.m in Sources */,
+				C1F2719117A3D10600329D55 /* GRKQQConnectConnector.m in Sources */,
+				C1F2719517A3D12F00329D55 /* GRKQQConnectGrabber.m in Sources */,
+				C1F2719917A3D14C00329D55 /* GRKQQConnectSingleton.m in Sources */,
+				C1F2719D17A52FEF00329D55 /* GRKQQConnectGrabber+usernameAndProfilePicture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2488,6 +2582,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/grabKit/submodules/Renren\"",
+					"\"$(SRCROOT)/grabKit/submodules/QQConnect\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrabKit/GrabKitDemo/grabKitDemo-Prefix.pch";
@@ -2516,6 +2611,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/grabKit/submodules/Renren\"",
+					"\"$(SRCROOT)/grabKit/submodules/QQConnect\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrabKit/GrabKitDemo/grabKitDemo-Prefix.pch";
@@ -2627,6 +2723,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/grabKit/submodules/Renren\"",
+					"\"$(SRCROOT)/grabKit/submodules/QQConnect\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrabKitLib/GrabKitLib-Prefix.pch";
@@ -2647,6 +2744,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/grabKit/submodules/Renren\"",
+					"\"$(SRCROOT)/grabKit/submodules/QQConnect\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrabKitLib/GrabKitLib-Prefix.pch";

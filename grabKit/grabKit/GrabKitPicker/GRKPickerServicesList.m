@@ -85,11 +85,19 @@
         [services addObject:device];
         #endif
         
+        #if GRK_RENREN_SERVICE
         NSDictionary * renren = [NSDictionary dictionaryWithObjectsAndKeys:@"GRKRenrenGrabber", @"class",
                                  @"Renren", @"title",
                                  nil];
         [services addObject:renren];
+        #endif
         
+        #if GRK_QQCONNECT_SERVICE
+        NSDictionary * qqConnect = [NSDictionary dictionaryWithObjectsAndKeys:@"GRKQQConnectGrabber", @"class",
+                                 @"QQConnect", @"title",
+                                 nil];
+        [services addObject:qqConnect];
+        #endif
 
         //services = [[NSArray alloc] initWithObjects:facebook, flickr, instagram, picasa, device, nil];
         
